@@ -1,0 +1,10 @@
+.search-bar {
+    background-color: rgb(201, 201, 235);
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+} 
