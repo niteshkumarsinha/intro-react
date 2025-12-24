@@ -4,9 +4,42 @@ import SearchBar from './SearchBar';
 
 const App = () => {
 
+
+    const fruits = [
+        'Apple',
+        'Banana',
+        'Orange',
+        'Grapes',
+        'Mango',
+        'Guava',
+        'Papaya',
+        'Peach',
+        'Pear',
+        'Pineapple',
+        'Pomegranate',
+        'Strawberry',
+        'Watermelon'
+    ];
+
+    const sports = [
+        'Football',
+        'Basketball',
+        'Tennis',
+        'Cricket',
+        'Hockey',
+        'Volleyball',
+        'Badminton',
+        'Table Tennis',
+        'Golf',
+        'Soccer',
+        'Rugby',
+        'Boxing'
+    ];
+
     return (
         <div>
-            <SearchBar />
+            <SearchBar products={fruits} />
+            <SearchBar products={sports} />
             <h1>My First React App</h1>
             <CountButton incrementBy={1} buttonColor={"blue"}/>
             <CountButton incrementBy={5} buttonColor={"green"}/>
