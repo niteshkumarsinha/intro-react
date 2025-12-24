@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './CountButton.css';
 
 
 const CountButton = (props) => {
 
     const {incrementBy, buttonColor} = props;
-    const [count, setCount] = React.useState(0);
+    const [count, setCount] = useState(0);
 
     const handleClick = () => {
         setCount(count => count + incrementBy);
@@ -30,6 +30,17 @@ const CountButton = (props) => {
         margin: '5px',
     }
 
+    useEffect(() => {
+        console.log("Only called when component is mounted");
+    }, []);
+
+    useEffect(() => {
+        console.log('called when count is updated and when component is mounted', count);
+        if (count === 10){
+            alert('Count reached 10');
+        }
+    }, [count]);
+ 
     return (
         <>
             <button onClick={handleClick} style={buttonStyle}>+{incrementBy}</button>
